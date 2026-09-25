@@ -1,0 +1,44 @@
+// la funcion de este codigo es poder realizar una lista de calificaciones registrando
+// alumnos, calficaciones y promedios
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int main(){
+    string nombre;
+    int edad;
+    float calificacion1, calificacion2, calificacion3;
+    float promedio;
+
+
+// ------------------ Para capturar los datos del alumno ------------------------------------
+    cout << "Nombre del alumno: ";
+    cin >> nombre;
+    cout << "Edad: ";
+    cin >> edad;
+    if (edad < 10 || edad > 100){
+        cout << "La edad es invalida" << endl;
+        return 1;
+    }
+
+// ------------------ Para ingresar las calificaciones --------------------------------
+
+    cout << "Ingresa las calificaciones (0/10)";
+    cin >> calificacion1 >> calificacion2 >> calificacion3;
+    if (calificacion1 < 0 || calificacion1 > 10 || calificacion2 < 0 || calificacion2 > 10 || calificacion3 < 0 || calificacion3 > 10){
+        cout << "La calificaion es invalida, Ingrese los datos correctos" << endl;
+        return 1;
+    }
+
+// ---------------- Realizacion del promedio de calificaiones ---------------------------------
+
+    promedio = (calificacion1 + calificacion2 + calificacion3) /3;
+    cout << "\n Calificaciones" << endl;
+    cout << "Estudiante: " << nombre << " (" << edad << "años)" << endl;
+    cout << "Promedio: " << promedio << endl;
+
+
+    return 0;
+    }
