@@ -1,10 +1,8 @@
 // la funcion de este codigo es poder realizar una lista de calificaciones registrando
 // alumnos, calficaciones y promedios
-
 #include <iostream>
 #include <string>
 using namespace std;
-
 
 int main(){
     string nombre;
